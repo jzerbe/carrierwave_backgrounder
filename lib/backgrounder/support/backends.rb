@@ -61,7 +61,7 @@ module CarrierWave
           end
 
           def enqueue_sucker_punch(worker, *args)
-            worker.new.async.perform(*args)
+            worker.perform_async(*args)
           end
 
           def enqueue_qu(worker, *args)
